@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday — For Her ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- background canvases -->
+  <canvas id="bgCanvas"></canvas>
+  <canvas id="fireworksCanvas"></canvas>
+
+  <main class="page">
+    <header class="hero">
+      <h1 id="typewriter" aria-live="polite"></h1>
+      <p class="sub">A little world made just for you ✨</p>
+      <div class="controls">
+        <button id="openGiftBtn" class="btn accent">Open Your Gift 🎁</button>
+        <button id="toggleMusic" class="btn">Play Music ▶️</button>
+      </div>
+
+      <div id="countdown" class="countdown" aria-hidden="false">
+        <div class="count-col"><span id="days">00</span><small>Days</small></div>
+        <div class="count-col"><span id="hours">00</span><small>Hours</small></div>
+        <div class="count-col"><span id="mins">00</span><small>Mins</small></div>
+        <div class="count-col"><span id="secs">00</span><small>Secs</small></div>
+      </div>
+    </header>
+
+    <section class="content">
+      <div class="left">
+        <section class="gallery card">
+          <h2>Memories — little story cards</h2>
+          <div class="carousel" id="carousel">
+            <!-- cards (no photos) -->
+            <div class="cardItem">
+              <div class="emoji">🌅</div>
+              <h3>Sunrise Walk</h3>
+              <p>That morning we watched the city wake up together — coffee and laughs.</p>
+            </div>
+            <div class="cardItem">
+              <div class="emoji">🍝</div>
+              <h3>First Cooking Night</h3>
+              <p>We burned the toast but nailed the conversation — forever my favourite chef.</p>
+            </div>
+            <div class="cardItem">
+              <div class="emoji">🎶</div>
+              <h3>Late-night Songs</h3>
+              <p>Singing off-key, making perfect memories under dim lights.</p>
+            </div>
+            <div class="cardItem">
+              <div class="emoji">✈️</div>
+              <h3>Random Trip</h3>
+              <p>Spontaneous road trip that felt like the only right direction — with you.</p>
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <button id="prevCard" class="small-btn">◀</button>
+            <button id="nextCard" class="small-btn">▶</button>
+          </div>
+        </section>
+
+        <section class="quiz card">
+          <h2>Fun Mini-Quiz — how well do you know me?</h2>
+          <div id="quizArea">
+            <p id="quizQuestion">Ready for a cute quiz?</p>
+            <div id="quizOptions" class="options">
+                <p>how </p>
+            </div>
+            <div class="quiz-controls">
+              <button id="quizNext" class="small-btn accent">Next</button>
+              <button id="quizRestart" class="small-btn">Restart</button>
+            </div>
+            <div id="quizResult" class="result"></div>
+          </div>
+        </section>
+      </div>
+
+      <div class="right">
+        <section class="notes card">
+          <h2>Hidden Love Notes</h2>
+          <p>Click floating hearts to reveal secret notes 💌</p>
+          <div id="notesList" class="notesList"></div>
+        </section>
+
+        <section class="unwrap card">
+          <h2>Your Digital Gift</h2>
+          <div id="giftBox" class="giftBox" role="button" tabindex="0" aria-pressed="false" title="Click to unwrap">
+            <div class="lid"></div>
+            <div class="box"></div>
+            <div class="sparkles"></div>
+          </div>
+          <p class="hint">Click the box repeatedly to unwrap your surprise</p>
+          <div id="giftReveal" class="giftReveal"></div>
+        </section>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Made with ❤️ — click anywhere to make fireworks</p>
+    </footer>
+  </main>
+
+  <!-- hidden audio: add song.mp3 to folder to enable -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="my feelings Mp3.mp3" type="audio/mpeg" />
+    <!-- If you want multiple tracks, modify script.js playlist -->
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
